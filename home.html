@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="logo/logo.PNG" alt="Book Haven Logo" class="site-logo">
+            </div>
+            <div class="header-content">
+                <h1>Book Haven Bookstore</h1>
+            </div>
+            <div class="user-actions">
+                <div class="account-wishlist">
+                    <a href="#">My Account</a> | <a href="#">Wishlist</a>
+                </div>
+                <div class="cart">
+                    <a href="#" id="view-cart">View Shopping Cart (0)</a>
+                </div>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for books..." class="search-input">
+            <button class="search-button">Search</button>
+        </div>
+    </header>
+
+    <div id="cart-details" style="display: none;">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <button id="close-cart">Close</button>
+    </div>
+
+    <div class="sidebar-categories">
+        <div class="category-search">
+            <label for="category-search">Category Search</label>
+            <input type="text" id="category-search" placeholder="Search categories...">
+        </div>
+        <ul>
+            <li>Science Fiction</li>
+            <li>Romance</li>
+            <li>Thrillers</li>
+            <li>Biographies</li>
+            <li>Self-Help</li>
+            <li>History</li>
+            <li>Young Adult</li>
+            <li>Religion</li>
+            <li>Poetry</li>
+            <li>Children's Books</li>
+        </ul>
+    </div>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav> 
+
+    <section class="book-grid">
+        <div class="book-card">
+            <img src="images/capture1.png" alt="Wicked">
+            <p class="book-title">Wicked</p>
+            <p class="book-price">$24.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture2.png" alt="Phantasma">
+            <p class="book-title">Phantasma</p>
+            <p class="book-price">$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture3.png" alt="When the Moon Hatched">
+            <p class="book-title">When the Moon Hatched</p>
+            <p class="book-price">$22.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture4.png" alt="Serpent and the Wings of Night">
+            <p class="book-title">Serpent and the Wings of Night</p>
+            <p class="book-price">$21.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture5.png" alt="Jujutsu Kaisen">
+            <p class="book-title">Jujutsu Kaisen</p>
+            <p class="book-price">$14.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture6.png" alt="The Death and Life of Edgar Allan Poe">
+            <p class="book-title">The Death and Life of Edgar Allan Poe</p>
+            <p class="book-price">$27.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture7.png" alt="Dungeon">
+            <p class="book-title">Dungeon</p>
+            <p class="book-price">$16.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture8.png" alt="Solo Leveling">
+            <p class="book-title">Solo Leveling</p>
+            <p class="book-price">$15.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture9.png" alt="Heaven Official's Blessing">
+            <p class="book-title">Heaven Official's Blessing</p>
+            <p class="book-price">$18.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture10.png" alt="Uzumaki">
+            <p class="book-title">Uzumaki</p>
+            <p class="book-price">$17.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture11.png" alt="What I Ate In One Year">
+            <p class="book-title">What I Ate In One Year</p>
+            <p class="book-price">$23.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="images/capture12.png" alt="Mythos">
+            <p class="book-title">Mythos</p>
+            <p class="book-price">$20.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Stay updated with the latest books and offers!</p>
+        <form action="#" method="POST" class="newsletter-form">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.querySelector('.newsletter-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = this.querySelector('input[name="email"]').value;
+            if (email) {
+                alert('Thank you for subscribing');
+                this.querySelector('input[name="email"]').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
